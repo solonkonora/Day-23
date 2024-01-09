@@ -13,7 +13,7 @@ const types = ['info', 'success', 'error']
 button.addEventListener('click', () => createNotification
   ('This is invalid data', 'success'))
 
-function createNotification() {
+function createNotification () {
   const notif = document.createElement('div')
   notif.classList.add('toast')
   notif.classList.add(types ? types : 'getRandomType()')
@@ -27,10 +27,6 @@ function createNotification() {
   }, 3000)
 }
 
-function getRandomMessage() {
+function getRandomMessage () {
   return messages[Math.floor(Math.random() * messages.length)]
-}
-
-function getRandomtype() {
-  return types[Math.floor(Math.random() * types.length)]
 }
